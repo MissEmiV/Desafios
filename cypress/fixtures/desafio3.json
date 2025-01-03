@@ -1,0 +1,14 @@
+{
+    "products": {
+        "product1name": "Sweater rosa",
+        "product1price": "$14.86",
+        "product1quantity": "2",
+        "product1totalprice": "$29.72",
+        "product2name": "Medias Negras",
+        "product2price": "$5.43",
+        "product2quantity": "1",
+        "product2totalprice": "$5.43",
+        "totalprice": "35.15"
+
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "desafios",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open --e2e -b electron",
+    "chrome": "npx cypress open --e2e -b chrome",
+    "dev": "npx cypress open --e2e -b chrome --config baseUrl=https://pushing-it.vercel.app",
+    "stage": "npx cypress open --e2e -b chrome --config baseUrl=https://pushing-front.vercel.app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.17.0"
+  }
+}
