@@ -5,6 +5,7 @@ export class ShoppingCartPage {
         this.productquantity = "#productAmount";
         this.productprice = "#unitPrice";
         this.totalproductprice = "#totalPrice";
+        this.totalcart = "#price"
     }
 
     GoToProducts() {
@@ -33,7 +34,7 @@ export class ShoppingCartPage {
     }
 
     verifyTotalPrice() {
-        return cy.get('#price');
+        return cy.get(this.totalcart);
     }
 
 }

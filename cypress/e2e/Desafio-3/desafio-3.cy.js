@@ -50,14 +50,13 @@ describe('Desafio-3', () => {
         shoppingCartPage.showTotalPrice().click();
         shoppingCartPage.verifyProductName(data.products.product1name);
         shoppingCartPage.verifyProductQuantity(data.products.product1name).should('have.text', data.products.product1quantity);
-        shoppingCartPage.verifyProductsPrice(data.products.product1name).should('have.text', data.products.product1price);
-        shoppingCartPage.verifyTotalProductPrice(data.products.product1name).should('have.text', data.products.product1totalprice);
+        shoppingCartPage.verifyProductsPrice(data.products.product1name).should('have.text', `$${(data.products.product1price)}`);
+        shoppingCartPage.verifyTotalProductPrice(data.products.product1name).should('have.text', `$${(data.products.product1quantity*data.products.product1price)}`);
         shoppingCartPage.verifyProductName(data.products.product2name);
         shoppingCartPage.verifyProductQuantity(data.products.product2name).should('have.text', data.products.product2quantity);
-        shoppingCartPage.verifyProductsPrice(data.products.product2name).should('have.text', data.products.product2price);
-        shoppingCartPage.verifyTotalProductPrice(data.products.product2name).should('have.text', data.products.product2totalprice);
-        shoppingCartPage.verifyTotalPrice().should('have.text', data.products.totalprice);
-        //shoppingCartPage.verifyTotalPrice().should('have.text', (data.products.product2totalprice+data.products.product1totalprice));
+        shoppingCartPage.verifyProductsPrice(data.products.product2name).should('have.text', `$${(data.products.product2price)}`);
+        shoppingCartPage.verifyTotalProductPrice(data.products.product2name).should('have.text', `$${(data.products.product2quantity*data.products.product2price)}`);
+        shoppingCartPage.verifyTotalPrice().should('have.text', (data.products.product1quantity*data.products.product1price+data.products.product2quantity*data.products.product2price));
 
     });
 
