@@ -11,12 +11,12 @@ export class LoginPage {
         cy.get('#registertoggle').dblclick();
     };
 
-    escribirUsuario(usuario) {
-        cy.get(this.userInput).type(usuario);
+    escribirUsuario() {
+        return cy.get(this.userInput);//.type(usuario);
     };
 
-    escribirContraseña(contraseña) {
-        cy.get(this.passInput).type(contraseña);
+    escribirContraseña() {
+        return cy.get(this.passInput);//.type(contraseña);
     };
 
     clickLogIn() {

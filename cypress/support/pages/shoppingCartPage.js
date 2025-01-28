@@ -37,4 +37,13 @@ export class ShoppingCartPage {
         return cy.get(this.totalcart);
     }
 
+    goToBillingSummary() {
+        return cy.contains('Go to Billing Summary');
+    }
+
+    goToCheckout() {
+        return cy.get('#goCheckout');
+    }
+
+
 }

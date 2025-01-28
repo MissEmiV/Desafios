@@ -1,0 +1,16 @@
+{
+    "products": {
+        "product1name": "Sweater rosa",
+        "product1price": 14.86,
+        "product1quantity": 1,
+        "product2name": "Medias Negras",
+        "product2price": 5.43,
+        "product2quantity": 1  
+    },
+
+    "payment": {
+        "paymentname":"Emiliana",
+        "paymentlastname":"Velez",
+        "CCnumber":"5000123456789000"
+    }
+}

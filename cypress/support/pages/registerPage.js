@@ -40,4 +40,4 @@ export class RegisterPage {
    // cy.get('[data-cy="sendTask"]').click();
     //cy.get("p").contains('Alimentar el gato').click();
 
-};
+}
