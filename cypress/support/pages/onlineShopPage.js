@@ -6,21 +6,24 @@ export class OnlineShopPage {
         this.clearmessagealert = '[data-cy="closeModal"]'
     }
 
-    searchProduct(products) {
-        return cy.get(this.searchproduct);
+    searchProduct(product) {
+        return cy.get(this.searchproduct).type(product);
+    }
+
+    searchProductType() {
+        return cy.get('[data-cy="search-type"]');
     }
 
     addToCart(products) {
-        //return cy.contains(products).have('Add to cart');
-        //return cy.contains('p', products ).siblings("Add to cart").click();
-        //return cy.contains('products').should('have.attr', 'button','aria-label: Add to cart;')
-        //return cy.contains('Add  to cart').siblings('button').should('have.class', 'chakra-button css-1uvxyz6', products);
-        //return cy.get('button',).contains('Add to cart');
-        //return cy.contains('Add to cart').siblings(products);
-        //cy.get('[class^="chakra-input password"]')
         return cy.contains(products).siblings('div').children('button[aria-label="Add to cart"]');
-        //return cy.get('p').contains(products).siblings('div').children('button[aria-label="Add to cart"]');
-        //return cy.get('button.class-chakra-button css-1uvxyz6[aria-label="Add to cart"]', name=[products]);
+    }
+
+    deleteProduct(product) {
+        return cy.contains(product).siblings('div').children('button[aria-label="Delete"]');
+    }
+
+    confirmDeleteProduct() {
+        return cy.get('#saveEdit');
     }
 
     clearMessageAlert() {
@@ -31,4 +34,17 @@ export class OnlineShopPage {
         return cy.get(this.gotoshoppingcart);
 
     }
+
+    goToAddProduct() {
+        return cy.get('#add-product');
+    }
+
+    verifyProductName(product) {
+        return cy.contains(product);
+    };
+
+    verifyProductPrice() {
+        return cy.get('#price');
+    };
+   
 }

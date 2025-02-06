@@ -32,12 +32,5 @@ export class RegisterPage {
         cy.get('[data-cy="submitForm"]').click();
     }
     
- 
-    
-    //cy.wait (1500)
-   // cy.get('[data-cy="todolistlink"]').click();
-    //cy.get('[data-cy="task"]').type('Alimentar el gato');
-   // cy.get('[data-cy="sendTask"]').click();
-    //cy.get("p").contains('Alimentar el gato').click();
 
 }

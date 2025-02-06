@@ -10,8 +10,8 @@ module.exports = defineConfig({
     watchForFileChanges: false,
     env: {
       usuario: "pushingit",
-      contraseña: "123456!"
-
+      contraseña: "123456!",
+      token: null
     }
   },
 });
