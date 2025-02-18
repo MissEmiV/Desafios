@@ -1,8 +1,14 @@
 {
     "product": {
-        "productname": "Reloj rojo",
-        "productprice": 20.99,
-        "productImageURL": "https://images.app.goo.gl/fLpcTgFFdjeToESt7",
-        "productID": "1099"
+        "name": "Reloj rojo",
+        "price": 20.99,
+        "img": "https://images.app.goo.gl/fLpcTgFFdjeToESt7",
+        "id": 1099
+    },
+    "productNew": {
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdowcyMPedpIWJdSlOEXG8VyUrxUYw8n7GAw&s",
+        "name": "Reloj negro",
+        "price": 25.99
     }
+   
 }

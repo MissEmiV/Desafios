@@ -22,8 +22,8 @@ describe('Desafio-3', () => {
     beforeEach("Desafio #3 con Page Object Model", () => {
         cy.visit('');
         registerPage.redirectLogin();
-        loginPage.escribirUsuario(Cypress.env().usuario);
-        loginPage.escribirContraseña(Cypress.env().contraseña);
+        loginPage.escribirUsuario().type(Cypress.env().usuario);
+        loginPage.escribirContraseña().type(Cypress.env().contraseña);
         loginPage.clickLogIn();
         homePage.returnUser();
         cy.wait(5000);

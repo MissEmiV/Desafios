@@ -22,8 +22,8 @@ describe('Desafio-1-avanzado', () => {
     before("Visitar el website y hacer login", () => {
         cy.visit('');
         registerPage.redirectLogin();
-        loginPage.escribirUsuario().type(Cypress.env().usuario);
-        loginPage.escribirContraseña().type(Cypress.env().contraseña);
+        loginPage.escribirUsuario().type(Cypress.env().user.username);
+        loginPage.escribirContraseña().type(Cypress.env().user.password);
         loginPage.clickLogIn();
         homePage.returnUser();
         cy.wait(3000);
