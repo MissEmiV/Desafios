@@ -14,5 +14,8 @@
   "description": "",
   "devDependencies": {
     "cypress": "^13.17.0"
+  },
+  "dependencies": {
+    "pg": "^8.13.3"
   }
 }

@@ -7,7 +7,7 @@ export class OnlineShopPage {
     }
 
     searchProduct(product) {
-        return cy.get(this.searchproduct).type(product);
+        return cy.get(this.searchproduct).clear().type(product);
     }
 
     searchProductType() {

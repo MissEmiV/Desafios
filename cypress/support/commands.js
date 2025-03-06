@@ -43,7 +43,7 @@ Cypress.Commands.add('login', (username, password) => {
 });
 
 Cypress.Commands.add('getProductById', (id) => {
-    cy.request({
+    return cy.request({
         method: "GET",
         url: `${Cypress.env().base_url_api}/products?id=${id}`,
         failsOnStatusCode: false,
@@ -64,7 +64,7 @@ Cypress.Commands.add('deleteProduct', (_id) => {
 })
 
 Cypress.Commands.add('createProduct', (product) => {
-    cy.request({
+    return cy.request({
         method: 'POST',
         url: `${Cypress.env().base_url_api}/create-product`,
         body: product,
@@ -84,3 +84,7 @@ Cypress.Commands.add('editProduct', (_id, productNew) => {
         },
     });
 })    
+
+Cypress.Commands.add('connectSQL', (query) => {
+    cy.task('connectDB', query) 
+})
