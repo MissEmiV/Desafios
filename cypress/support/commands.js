@@ -88,3 +88,24 @@ Cypress.Commands.add('editProduct', (_id, productNew) => {
 Cypress.Commands.add('connectSQL', (query) => {
     cy.task('connectDB', query) 
 })
+
+Cypress.Commands.add('loginSession', (username, password, sessionName) => {
+    cy.session(sessionName, () => {
+        cy.request({
+            method: "POST",
+            url: `${Cypress.env().base_url_api}/login`,
+            body: {
+                username: username,
+                password: password
+            },
+        }).then(respuesta => {
+            window.localStorage.setItem('token', respuesta.body.token);
+            window.localStorage.setItem('user', respuesta.body.user.username);
+            window.localStorage.setItem('userId', respuesta.body.user._id);
+            Cypress.env().token = respuesta.body.token
+        });
+    },
+        {
+            cacheAcrossSpecs: true
+        })
+});

@@ -26,10 +26,12 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     watchForFileChanges: false,
     env: {
-      user: {
+      users: {
+        admin: {
         username: "pushingit",
         password: "123456!"
       },
+    },
       base_url_api: "https://pushing-it-3.onrender.com/api",
       token: null
     }

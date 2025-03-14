@@ -25,12 +25,12 @@ export class ShoppingCartPage {
         return cy.contains(products).siblings(this.productquantity);
     }
 
-    verifyProductsPrice(products) {
-        return cy.contains(products).siblings(this.productprice);
+    verifyProductsPrice(product) {
+        return cy.contains(product).siblings(this.productprice);
     }
 
-    verifyTotalProductPrice(products) {
-        return cy.contains(products).siblings(this.totalproductprice);
+    verifyTotalProductPrice(product) {
+        return cy.contains(product).siblings(this.totalproductprice);
     }
 
     verifyTotalPrice() {
